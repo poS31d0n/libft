@@ -6,17 +6,17 @@
 #    By: sscot <sscot@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/22 11:21:28 by sscot             #+#    #+#              #
-#    Updated: 2021/10/25 17:37:25 by sscot            ###   ########.fr        #
+#    Updated: 2021/10/26 18:58:10 by sscot            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = libft.a
+NAME	=	libft.a
 
-FLAGS	= -c -Wall -Werror -Wextra 
+FLAGS	=	-c -Wall -Werror -Wextra
 
-HEAD = libft.h
+HEAD	=	libft.h
 
-SRC = \
+SRC	=	\
 ft_atoi.c \
 ft_isascii.c \
 ft_isalnum.c \
@@ -48,7 +48,7 @@ ft_split.c \
 ft_strmapi.c \
 ft_putstr_fd.c \
 ft_putchar_fd.c \
-ft_putendl_fd.c \ 
+ft_putendl_fd.c \
 ft_putnbr_fd.c \
 ft_striteri.c
 
@@ -57,7 +57,7 @@ OBJ		=	$(SRC:.c=.o)
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	gcc  $(FLAGS) $(SRC) 
+	gcc  $(FLAGS) $(SRC)
 	ar rc $(NAME) $(OBJ)
 	ranlib $(NAME)
 
@@ -69,5 +69,4 @@ fclean: clean
 
 re: fclean all
 
-
-.PHONY:			all clean fclean re bonus
+.PHONY:	all clean fclean re bonus

@@ -61,7 +61,7 @@ static int	write_split(char **split, const char *str, char charset)
 				j++;
 			split[word] = (char *)malloc(sizeof(char) * (j + 1));
 			if (!split[word])
-				return (ft_free_split(split, word));
+				return (0);
 			write_word(split[word], str + i, charset);
 			i += j;
 			word++;
